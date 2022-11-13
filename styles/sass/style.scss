@@ -1,0 +1,102 @@
+@import './components/colorbar.scss';
+@import './components/mixinbar.scss';
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $c-basic;
+    margin-top: 10%;
+}
+
+.cube-box {
+    @include basicClasses(2px solid $c-cube-border, fit-content, fit-content);
+    @include gridTemplate(3, 3);
+    margin: auto;
+    transition: all .4s;
+
+}
+
+.cube-bar {
+    @include basicClasses(1px solid $c-cube-border, fit-content, fit-content);
+    @include gridTemplate(3, 3);
+    padding: 1px;
+
+}
+
+.cube-number-bar {
+    @include basicClasses(0.5px solid $c-cube-border, 25px, 25px);
+    background-color: $c-basic;
+    cursor: pointer;
+    text-align: center;
+    color: aliceblue;
+    border-radius: 4px;
+    transition: all .5s;
+}
+
+
+.currect-value {
+    pointer-events: none;
+    color: $c-currect-value;
+}
+
+.incurrect-value {
+    filter: blur(1px);
+}
+
+.reset-icon {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: gray;
+    top: 250px;
+    cursor: pointer;
+    z-index: 99;
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+
+.check-box {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+
+    .check-btn {
+        border-radius: 4px;
+        padding: 10px 30px;
+        background-color: $c-done;
+        border: $c-done;
+        cursor: pointer;
+        color: $c-white;
+        transition: all .5s;
+
+        &:hover {
+            background-color: $c-white;
+            color: $c-done;
+        }
+
+        i {
+            font-family: 'Kalam', cursive;
+        }
+    }
+}
+
+.empty-value {
+    box-shadow: 1px 1px 3px 1px $c-const-empty-value inset;
+}
+
+.win-style {
+    box-shadow: 1px 1px 3px 1px $c-win inset;
+}
+
+.show-box{
+    width: 100%;
+text-align: center;
+}

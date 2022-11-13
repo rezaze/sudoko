@@ -1,0 +1,12 @@
+@mixin basicClasses($border, $width, $height) {
+    border: $border;
+    width: $width;
+    height: $height;
+}
+
+@mixin gridTemplate($row, $col) {
+    display: grid;
+    grid-template-columns: repeat($col, 1fr);
+    grid-template-rows: repeat($row, 1fr);
+}
+
