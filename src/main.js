@@ -31,7 +31,7 @@ let verCube = 0;
 let showMin = 0;
 let showSec = 0;
 let baseScore = 81 * 100;
-let finalScore = 0;
+
 
 makeCubes(cubeBox);
 
@@ -182,7 +182,7 @@ checkBtn.addEventListener('click', e => {
     if (checkEveryValue) {
         cubeBox.classList.add('win-style');
         clearInterval(timer);
-        finalScore = baseScore - ((+showTime.innerHTML.split(':')[0] * 60) + (+showTime.innerHTML.split(':')[1]));
+       var finalScore = baseScore - ((+showTime.innerHTML.split(':')[0] * 60) + (+showTime.innerHTML.split(':')[1]));
     }
 })
 
